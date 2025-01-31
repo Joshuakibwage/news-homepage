@@ -92,7 +92,7 @@ const Trending = () => {
 
           <img 
             src="src/assets/images/image-top-laptops.jpg" 
-            alt="desktop" 
+            alt="keypad" 
             className="h-30"
           />
 
@@ -109,7 +109,7 @@ const Trending = () => {
 
           <img 
             src="src/assets/images/image-gaming-growth.jpg" 
-            alt="desktop" 
+            alt="Console" 
             className="h-30"
           />
 
