@@ -3,6 +3,7 @@
  import logo from "../assets/images/logo.svg"
  import hamburger from "../assets/images/icon-menu.svg"
  import close from "../assets/images/icon-menu-close.svg"
+//  import { useLocation } from "react-router-dom"
 
 
 const Navbar = () => {
@@ -19,18 +20,19 @@ const Navbar = () => {
       {/* Desktop navbar */}
       <div className="w-3/4 flex justify-between items-center mx-auto mt-10">
 
-        <div>
+        <div className="cursor-pointer">
           <img src={logo} alt="" />
         </div>
         {/* I map through navLinks located in the constants/index.js file to display them on the navbar */}
         <div className="gap-8 md:flex hidden">
           {navLinks.map((link) => (
             <ul key={link.href}>
-              <li 
+              <a 
+                href={link.href}
                 className="text-slate-700"
               >
                 {link.label}
-              </li>
+              </a>
             </ul>
           ))}
         </div>
@@ -46,14 +48,15 @@ const Navbar = () => {
 
       {nav ? (
         
-        <div className="flex flex-col md:hidden absolute top-0 pt-40 right-0 w-1/2 h-screen bg-offwhite z-2">
+        <div className="flex flex-col md:hidden absolute top-0 pt-40 right-0 w-1/2 h-screen bg-slate-100 z-2">
           {navLinks.map((link) => (
-            <ul key={link.href} className="mt-5">
-              <li 
-                className="text-slate-700 ml-8 text-xl font-bold"
+            <ul className="mt-5" key={link.href}>
+              <a 
+                href={link.href}
+                className="text-slate-700 ml-8 text-xl font-bold "
               >
                 {link.label}
-              </li>
+              </a>
             </ul>
           ))}
         </div>
