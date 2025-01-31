@@ -1,20 +1,15 @@
- import Hero from "../src/pages/Hero"
+
  import Navbar from "../src/components/Navbar"
- import { createBrowserRouter, RouterProvider } from "react-router-dom"
+import Trending from "./pages/Trending"
 
-
- const router = createBrowserRouter({
-  {
-    path: '/',
-    element: 
-  }
- });
+ 
  
  const App = () => {
    return (
-     <div className="">
+     <div>
         <Navbar />
-        <Hero />
+        <Trending />
+
      </div>
    )
  }
